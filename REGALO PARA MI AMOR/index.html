@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para Denise💓</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         PANTALLA DE ACCESO
+    ========================== -->
+
+    <div id="loginScreen" class="login-screen">
+
+        <div class="login-glow"></div>
+
+        <div class="login-card">
+
+            <div class="login-flower">🌷</div>
+
+            <p class="mini-title">
+                UN PEQUEÑO LUGAR PARA TI
+            </p>
+
+            <h1>
+                Solo tú puedes entrar
+            </h1>
+
+            <p class="login-description">
+                Hay algo preparado especialmente para ti.
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Escribe la clave..."
+                    autocomplete="off">
+
+                <button onclick="entrar()">
+                    Entrar 💓
+                </button>
+
+            </div>
+
+            <p id="errorMessage" class="error-message"></p>
+
+            <p class="login-footer">
+                Una pequeña sorpresa hecha con cariño 🌹
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main id="mainContent" class="hidden">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div id="particles"></div>
+
+            <div class="hero-content">
+
+                <p class="mini-title">
+                    PARA LA PERSONA MÁS ESPECIAL
+                </p>
+
+                <h1>
+                    Para ti,
+                    <span>mi amor</span>
+                </h1>
+
+                <p class="hero-description">
+                    Hice este pequeño lugar solamente para ti.
+                </p>
+
+                <button
+                    class="primary-button"
+                    onclick="abrirCarta()">
+
+                    💌
+                    Abrir mi carta
+
+                </button>
+
+            </div>
+
+
+            <!-- Flores decorativas -->
+
+            <div class="hero-flower flower-left">
+                🌷
+            </div>
+
+            <div class="hero-flower flower-right">
+                🌷
+            </div>
+
+            <div class="floating-rose rose-one">
+                🌹
+            </div>
+
+            <div class="floating-rose rose-two">
+                🌹
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTADOR
+        ========================== -->
+
+        <section class="counter-section">
+
+            <p class="mini-title">
+                NUESTRO TIEMPO
+            </p>
+
+            <h2>
+                Cada momento contigo cuenta 💓
+            </h2>
+
+            <div class="counter">
+
+                <div class="counter-item">
+                    <strong id="days">0</strong>
+                    <span>Días</span>
+                </div>
+
+                <div class="counter-item">
+                    <strong id="hours">0</strong>
+                    <span>Horas</span>
+                </div>
+
+                <div class="counter-item">
+                    <strong id="minutes">0</strong>
+                    <span>Minutos</span>
+                </div>
+
+                <div class="counter-item">
+                    <strong id="seconds">0</strong>
+                    <span>Segundos</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CARTA
+        ========================== -->
+
+        <section class="letter-section">
+
+            <div class="letter-card" id="letter">
+
+                <div class="letter-decoration">
+                    🌹
+                </div>
+
+                <p class="letter-small">
+                    PARA TI
+                </p>
+
+                <h2>
+                    Mi niña...
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    Quería hacerte algo diferente.
+                    No solamente regalarte una flor,
+                    sino crear un pequeño lugar que
+                    pudiera guardar algunas palabras
+                    para ti.
+                </p>
+
+                <p>
+                    Cada flor de esta página representa
+                    un pequeño detalle. Los colores,
+                    las luces y cada animación están aquí
+                    porque quería que esto se sintiera
+                    especial.
+                </p>
+
+                <p>
+                    Gracias por estar en mi vida Denise,
+                    por los momentos que hemos compartido 
+                    aun que sea a distancia 
+                    y por todas esas pequeñas cosas que
+                    hacen que estar contigo sea especial.
+                </p>
+
+                <p class="special-message">
+                    Te quiero muchísimo ChiChi. 💓
+                </p>
+
+                <div class="signature">
+                    — Con cariño, Noé 🌷
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             JARDÍN
+        ========================== -->
+
+        <section class="garden-section">
+
+            <p class="mini-title">
+                UN JARDÍN PARA TI
+            </p>
+
+            <h2>
+                Porque te mereces todas las flores 🌷
+            </h2>
+
+            <div class="garden">
+
+                <div class="css-flower pink">
+                    <div class="petals">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="center"></div>
+                    <div class="stem"></div>
+                    <div class="leaf"></div>
+                </div>
+
+
+                <div class="css-flower red">
+                    <div class="petals">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="center"></div>
+                    <div class="stem"></div>
+                    <div class="leaf"></div>
+                </div>
+
+
+                <div class="css-flower purple">
+                    <div class="petals">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="center"></div>
+                    <div class="stem"></div>
+                    <div class="leaf"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- =========================
+             MENSAJE FINAL
+        ========================== -->
+
+        <section class="final-section">
+
+            <div class="big-flower">
+                🌷
+            </div>
+
+            <h2>
+                Si algún día dudas...
+            </h2>
+
+            <p>
+                recuerda que existe alguien que hizo
+                todo esto pensando en ti.
+            </p>
+
+            <button
+                class="heart-button"
+                onclick="lluviaDeCorazones()">
+
+                💓
+                Presiona aquí
+
+            </button>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Hecho con 💓, código y mucho cariño.
+            </p>
+
+            <span>
+                🌷 Para ti 🌷
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

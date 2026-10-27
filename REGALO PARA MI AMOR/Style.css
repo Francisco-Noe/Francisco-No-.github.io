@@ -1,0 +1,1123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #0c0710;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-screen {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #43233b,
+            #160b17 45%,
+            #080509
+        );
+
+    z-index: 9999;
+
+    transition: opacity 1s ease,
+                visibility 1s ease;
+}
+
+.login-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.login-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 100, 170, .15);
+
+    filter: blur(100px);
+}
+
+.login-card {
+
+    position: relative;
+
+    width: min(90%, 480px);
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.06);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5);
+}
+
+.login-flower {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.mini-title {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #e7a5c5;
+
+    margin-bottom: 18px;
+}
+
+.login-card h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    color: #ffb3d2;
+
+    margin-bottom: 15px;
+}
+
+.login-description {
+
+    color: #c8b9c4;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.password-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.password-box input {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    outline: none;
+
+    background: rgba(0,0,0,.25);
+
+    color: white;
+
+    text-align: center;
+
+    font-family: inherit;
+
+    transition: .3s;
+}
+
+.password-box input:focus {
+
+    border-color: #ff8fbd;
+
+    box-shadow:
+        0 0 20px rgba(255, 143, 189, .15);
+}
+
+.password-box button {
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d84c82,
+            #a82f65
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.password-box button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(216,76,130,.3);
+}
+
+.error-message {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    color: #ff8da9;
+
+    font-size: 13px;
+}
+
+.login-footer {
+
+    margin-top: 30px;
+
+    color: #766874;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(217,75,125,.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #120914,
+            #2b1426,
+            #35172b
+        );
+}
+
+#particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding: 30px;
+
+}
+
+.hero h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(80px, 12vw, 150px);
+
+    font-weight: 400;
+
+    line-height: .8;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 40px rgba(255,255,255,.08);
+}
+
+.hero h1 span {
+
+    display: block;
+
+    color: #ff9fc8;
+
+    text-shadow:
+        0 0 30px rgba(255,100,170,.25);
+}
+
+.hero-description {
+
+    margin-top: 35px;
+
+    color: #d6c8d1;
+
+    font-size: 15px;
+}
+
+.primary-button {
+
+    margin-top: 35px;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: .3s;
+
+    backdrop-filter: blur(10px);
+}
+
+.primary-button:hover {
+
+    transform: translateY(-5px);
+
+    background: rgba(255,130,180,.18);
+
+    box-shadow:
+        0 15px 40px rgba(255,100,170,.2);
+}
+
+
+/* =========================
+   FLORES FLOTANTES
+========================= */
+
+.hero-flower {
+
+    position: absolute;
+
+    font-size: 110px;
+
+    filter:
+        drop-shadow(
+            0 10px 20px rgba(0,0,0,.3)
+        );
+
+    animation:
+        floating 4s ease-in-out infinite;
+}
+
+.flower-left {
+
+    left: 5%;
+
+    bottom: 8%;
+}
+
+.flower-right {
+
+    right: 5%;
+
+    top: 15%;
+
+    animation-delay: 1.5s;
+}
+
+.floating-rose {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    animation:
+        floating 5s ease-in-out infinite;
+}
+
+.rose-one {
+
+    left: 20%;
+
+    top: 15%;
+}
+
+.rose-two {
+
+    right: 20%;
+
+    bottom: 15%;
+
+    animation-delay: 2s;
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.counter-section {
+
+    padding: 110px 20px;
+
+    text-align: center;
+
+    background: #100a12;
+}
+
+.counter-section h2 {
+
+    font-size: 35px;
+
+    font-weight: 400;
+
+    margin-bottom: 55px;
+}
+
+.counter {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.counter-item {
+
+    width: 130px;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.counter-item strong {
+
+    display: block;
+
+    font-size: 35px;
+
+    color: #ff9fc5;
+}
+
+.counter-item span {
+
+    font-size: 11px;
+
+    color: #8e7d89;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.letter-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #100a12,
+            #281322
+        );
+}
+
+.letter-card {
+
+    width: min(90%, 720px);
+
+    padding: 70px;
+
+    position: relative;
+
+    text-align: center;
+
+    color: #49343e;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf6,
+            #f4e5df
+        );
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.4);
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition: 1s;
+}
+
+.letter-card.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.letter-decoration {
+
+    position: absolute;
+
+    right: 35px;
+
+    top: 25px;
+
+    font-size: 35px;
+}
+
+.letter-small {
+
+    color: #ad728d;
+
+    letter-spacing: 5px;
+
+    font-size: 10px;
+}
+
+.letter-card h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 70px;
+
+    font-weight: 400;
+
+    color: #a73e6c;
+
+    margin: 15px 0;
+}
+
+.line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: #c788a2;
+
+    margin: 0 auto 30px;
+}
+
+.letter-card p {
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.special-message {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 38px !important;
+
+    color: #b33f71;
+
+    margin-top: 30px;
+}
+
+.signature {
+
+    margin-top: 30px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+
+    color: #8d6173;
+}
+
+
+/* =========================
+   JARDÍN
+========================= */
+
+.garden-section {
+
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #281322,
+            #0d0910
+        );
+}
+
+.garden-section h2 {
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-bottom: 70px;
+}
+
+.garden {
+
+    height: 330px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 100px;
+}
+
+.css-flower {
+
+    width: 100px;
+
+    height: 300px;
+
+    position: relative;
+
+    animation:
+        flowerSway 4s ease-in-out infinite;
+}
+
+.css-flower:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.css-flower:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.petals {
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 80px;
+
+    left: 10px;
+
+    top: 0;
+
+    z-index: 2;
+}
+
+.petals span {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 55px;
+
+    left: 18px;
+
+    border-radius:
+        50% 50% 45% 45%;
+}
+
+.petals span:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.petals span:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.petals span:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.petals span:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+.pink .petals span {
+    background: #ff82ae;
+}
+
+.red .petals span {
+    background: #e84c67;
+}
+
+.purple .petals span {
+    background: #a96fd0;
+}
+
+.center {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #ffd36a;
+
+    top: 30px;
+
+    left: 38px;
+
+    z-index: 3;
+}
+
+.stem {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 240px;
+
+    left: 48px;
+
+    top: 60px;
+
+    border-radius: 10px;
+
+    background: #527a57;
+}
+
+.leaf {
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 28px;
+
+    top: 170px;
+
+    left: 0;
+
+    background: #527a57;
+
+    border-radius: 100% 0;
+
+    transform: rotate(-20deg);
+}
+
+
+/* =========================
+   RECUERDOS
+========================= */
+
+.memories {
+
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background: #0d0910;
+}
+
+.memories h2 {
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-bottom: 60px;
+}
+
+.memory-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.memory-card {
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.memory-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(255,150,190,.3);
+}
+
+.memory-image {
+
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #321a2d,
+            #1a101a
+        );
+
+    font-size: 70px;
+
+    margin-bottom: 25px;
+}
+
+.memory-card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+.memory-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #968793;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #472039,
+            #090609
+        );
+}
+
+.big-flower {
+
+    font-size: 100px;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+.final-section h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 75px;
+
+    font-weight: 400;
+
+    color: #ffabc9;
+
+    margin-top: 20px;
+}
+
+.final-section p {
+
+    max-width: 550px;
+
+    color: #c9bac4;
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+}
+
+.heart-button {
+
+    margin-top: 35px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    background: #c94276;
+
+    color: white;
+
+    font-family: inherit;
+
+    transition: .3s;
+}
+
+.heart-button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 40px rgba(201,66,118,.35);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #060407;
+
+    color: #776873;
+
+    font-size: 11px;
+}
+
+footer span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #b87591;
+}
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    animation:
+        heartUp 5s linear forwards;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes floating {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes flowerSway {
+
+    0%,100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes heartUp {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            scale(.5);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-100vh)
+            rotate(30deg)
+            scale(1.4);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 700px) {
+
+    .login-card {
+        padding: 40px 25px;
+    }
+
+    .login-card h1 {
+        font-size: 45px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero-flower {
+        font-size: 60px;
+    }
+
+    .counter-item {
+        width: 110px;
+    }
+
+    .letter-card {
+        padding: 45px 25px;
+    }
+
+    .letter-card h2 {
+        font-size: 55px;
+    }
+
+    .garden {
+        gap: 15px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .final-section h2 {
+        font-size: 55px;
+    }
+}
